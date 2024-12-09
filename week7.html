@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Week 7 - App Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .question-container {
+            background: #fff;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            font-size: 1em;
+        }
+
+        .show-answer {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 1.1em;
+            color: #fff;
+            background: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .show-answer:hover,
+        .show-answer:active {
+            background: #45a049;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            background: #dff0d8;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Week 7 - App Development</h1>
+
+<!-- Question 1 -->
+<div class="question-container">
+    <p class="question">1. What tool is recommended for managing multiple versions of Node?</p>
+    <ul>
+        <li>A) npm</li>
+        <li>B) nvm</li>
+        <li>C) Expo</li>
+        <li>D) Android Studio</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(1)">Show Answer</button>
+    <div id="answer1" class="answer">Answer: B) nvm<br><strong>Explanation:</strong> Node Version Manager (nvm) allows you to switch between different versions of Node.js.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <p class="question">2. What command is used to check the installed version of Node?</p>
+    <ul>
+        <li>A) node -version</li>
+        <li>B) node -v</li>
+        <li>C) npm -v</li>
+        <li>D) node --check</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(2)">Show Answer</button>
+    <div id="answer2" class="answer">Answer: B) node -v<br><strong>Explanation:</strong> The <code>node -v</code> command displays the installed version of Node.js.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <p class="question">3. What is the default command used to start a project in Expo?</p>
+    <ul>
+        <li>A) expo create</li>
+        <li>B) npx expo run</li>
+        <li>C) npm start</li>
+        <li>D) expo start</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(3)">Show Answer</button>
+    <div id="answer3" class="answer">Answer: D) expo start<br><strong>Explanation:</strong> The <code>expo start</code> command initiates the Expo development server.</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <p class="question">4. Which command creates a new Expo project with a blank template?</p>
+    <ul>
+        <li>A) expo init my-project</li>
+        <li>B) npx create-expo-app my-project --template blank</li>
+        <li>C) npm init expo-app my-project</li>
+        <li>D) npx init-expo my-project</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(4)">Show Answer</button>
+    <div id="answer4" class="answer">Answer: B) npx create-expo-app my-project --template blank<br><strong>Explanation:</strong> This command sets up a new Expo project with a blank template.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <p class="question">5. What is an advantage of using npx instead of installing expo-cli globally?</p>
+    <ul>
+        <li>A) It always uses the latest version.</li>
+        <li>B) It installs faster applications.</li>
+        <li>C) It reduces app size.</li>
+        <li>D) It doesn't require Node.js.</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(5)">Show Answer</button>
+    <div id="answer5" class="answer">Answer: A) It always uses the latest version.<br><strong>Explanation:</strong> The npx command runs the most recent version of a package without globally installing it.</div>
+</div>
+
+<!-- Question 6 -->
+<div class="question-container">
+    <p class="question">6. Which file specifies dependencies and scripts for a Node.js project?</p>
+    <ul>
+        <li>A) index.js</li>
+        <li>B) package.json</li>
+        <li>C) app.config.js</li>
+        <li>D) node_modules.json</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(6)">Show Answer</button>
+    <div id="answer6" class="answer">Answer: B) package.json<br><strong>Explanation:</strong> The package.json file lists the dependencies, scripts, and metadata for a Node.js project.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <p class="question">7. What tool is required to test Expo apps on a physical device?</p>
+    <ul>
+        <li>A) Android Studio</li>
+        <li>B) Expo Go app</li>
+        <li>C) XCode</li>
+        <li>D) Visual Studio Code</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(7)">Show Answer</button>
+    <div id="answer7" class="answer">Answer: B) Expo Go app<br><strong>Explanation:</strong> The Expo Go app allows you to test Expo projects on your mobile device.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <p class="question">8. What does the 'AVD' in Android Studio stand for?</p>
+    <ul>
+        <li>A) Android Visual Designer</li>
+        <li>B) Android Virtual Device</li>
+        <li>C) Application View Device</li>
+        <li>D) Android Virtual Display</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(8)">Show Answer</button>
+    <div id="answer8" class="answer">Answer: B) Android Virtual Device<br><strong>Explanation:</strong> AVD stands for Android Virtual Device, which is used for emulating Android devices.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+    <p class="question">9. What command starts a project on an Android emulator?</p>
+    <ul>
+        <li>A) npm start android</li>
+        <li>B) npm run android</li>
+        <li>C) expo android</li>
+        <li>D) npx start android</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(9)">Show Answer</button>
+    <div id="answer9" class="answer">Answer: B) npm run android<br><strong>Explanation:</strong> The <code>npm run android</code> command compiles and runs the project on an Android emulator.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+    <p class="question">10. Which folder is typically used for storing images in an Expo project?</p>
+    <ul>
+        <li>A) assets</li>
+        <li>B) components</li>
+        <li>C) screens</li>
+        <li>D) data</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(10)">Show Answer</button>
+    <div id="answer10" class="answer">Answer: A) assets<br><strong>Explanation:</strong> The <code>assets</code> folder is used for storing images, icons, and other static resources.</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+    <p class="question">11. What command initializes an Expo project with default settings?</p>
+    <ul>
+        <li>A) npx create-expo-app my-app</li>
+        <li>B) npm init expo</li>
+        <li>C) expo start</li>
+        <li>D) npx init</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(11)">Show Answer</button>
+    <div id="answer11" class="answer">Answer: A) npx create-expo-app my-app<br><strong>Explanation:</strong> This command sets up an Expo project with a blank template.</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+    <p class="question">12. In an Expo project, where are JavaScript files for individual screens typically stored?</p>
+    <ul>
+        <li>A) /assets</li>
+        <li>B) /screens</li>
+        <li>C) /components</li>
+        <li>D) /data</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(12)">Show Answer</button>
+    <div id="answer12" class="answer">Answer: B) /screens<br><strong>Explanation:</strong> JavaScript files for screens are stored in the <code>/screens</code> folder for organization.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+    <p class="question">13. What file type is required to reference static images in a React Native project?</p>
+    <ul>
+        <li>A) .svg</li>
+        <li>B) .js</li>
+        <li>C) .png or .jpg</li>
+        <li>D) .txt</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(13)">Show Answer</button>
+    <div id="answer13" class="answer">Answer: C) .png or .jpg<br><strong>Explanation:</strong> Static image files in <code>.png</code> or <code>.jpg</code> formats are commonly used in React Native projects.</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+    <p class="question">14. What function is used to apply styles in React Native?</p>
+    <ul>
+        <li>A) StyleSheet.create()</li>
+        <li>B) setStyles()</li>
+        <li>C) createStyles()</li>
+        <li>D) applyStyles()</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(14)">Show Answer</button>
+    <div id="answer14" class="answer">Answer: A) StyleSheet.create()<br><strong>Explanation:</strong> The <code>StyleSheet.create()</code> method defines reusable styles in React Native.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+    <p class="question">15. Which Expo command is used to start the development server?</p>
+    <ul>
+        <li>A) expo start</li>
+        <li>B) expo dev</li>
+        <li>C) npx start-expo</li>
+        <li>D) npm run dev</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(15)">Show Answer</button>
+    <div id="answer15" class="answer">Answer: A) expo start<br><strong>Explanation:</strong> The <code>expo start</code> command starts the Expo development server.</div>
+</div>
+
+<!-- Question 16 -->
+<div class="question-container">
+    <p class="question">16. What is the role of the <code>App.js</code> file in a React Native project?</p>
+    <ul>
+        <li>A) To define app metadata</li>
+        <li>B) To act as the entry point of the application</li>
+        <li>C) To store assets</li>
+        <li>D) To manage dependencies</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(16)">Show Answer</button>
+    <div id="answer16" class="answer">Answer: B) To act as the entry point of the application<br><strong>Explanation:</strong> The <code>App.js</code> file is the main entry point where the app's structure and functionality begin.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+    <p class="question">17. What is the purpose of the <code>View</code> component in React Native?</p>
+    <ul>
+        <li>A) Displaying images</li>
+        <li>B) Managing layout and grouping elements</li>
+        <li>C) Adding interactivity</li>
+        <li>D) Fetching data</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(17)">Show Answer</button>
+    <div id="answer17" class="answer">Answer: B) Managing layout and grouping elements<br><strong>Explanation:</strong> The <code>View</code> component is used to group and style UI elements in React Native.</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+    <p class="question">18. Which folder contains the downloaded libraries in a Node.js project?</p>
+    <ul>
+        <li>A) /data</li>
+        <li>B) /node_modules</li>
+        <li>C) /components</li>
+        <li>D) /assets</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(18)">Show Answer</button>
+    <div id="answer18" class="answer">Answer: B) /node_modules<br><strong>Explanation:</strong> The <code>/node_modules</code> folder contains installed libraries and dependencies.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+    <p class="question">19. What command is used to install dependencies listed in <code>package.json</code>?</p>
+    <ul>
+        <li>A) npm install</li>
+        <li>B) npm run</li>
+        <li>C) npm init</li>
+        <li>D) expo install</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(19)">Show Answer</button>
+    <div id="answer19" class="answer">Answer: A) npm install<br><strong>Explanation:</strong> The <code>npm install</code> command installs all dependencies defined in the <code>package.json</code> file.</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+    <p class="question">20. How do you add a third-party library to your project?</p>
+    <ul>
+        <li>A) Include it in <code>App.js</code></li>
+        <li>B) Use <code>npm install [library-name]</code></li>
+        <li>C) Place it in the <code>/assets</code> folder</li>
+        <li>D) Add it to <code>node_modules</code> manually</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(20)">Show Answer</button>
+    <div id="answer20" class="answer">Answer: B) Use <code>npm install [library-name]</code><br><strong>Explanation:</strong> The <code>npm install</code> command adds the library to your project and updates <code>package.json</code>.</div>
+</div>
+<!-- Question 21 -->
+<div class="question-container">
+    <p class="question">21. Which command removes a package from your project?</p>
+    <ul>
+        <li>A) npm uninstall [package-name]</li>
+        <li>B) npm delete [package-name]</li>
+        <li>C) npm remove [package-name]</li>
+        <li>D) npm clean [package-name]</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(21)">Show Answer</button>
+    <div id="answer21" class="answer">Answer: A) npm uninstall [package-name]<br><strong>Explanation:</strong> The <code>npm uninstall</code> command removes a package and updates <code>package.json</code>.</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <p class="question">22. What is the purpose of the <code>Text</code> component in React Native?</p>
+    <ul>
+        <li>A) Displaying interactive elements</li>
+        <li>B) Displaying text content</li>
+        <li>C) Creating navigation links</li>
+        <li>D) Formatting images</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(22)">Show Answer</button>
+    <div id="answer22" class="answer">Answer: B) Displaying text content<br><strong>Explanation:</strong> The <code>Text</code> component is used to render text in React Native.</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <p class="question">23. What property in a <code>StyleSheet</code> controls the spacing between elements?</p>
+    <ul>
+        <li>A) margin</li>
+        <li>B) padding</li>
+        <li>C) spacing</li>
+        <li>D) layout</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(23)">Show Answer</button>
+    <div id="answer23" class="answer">Answer: A) margin<br><strong>Explanation:</strong> The <code>margin</code> property defines the spacing outside an element's border.</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <p class="question">24. Which layout system does React Native use?</p>
+    <ul>
+        <li>A) Grid</li>
+        <li>B) Flexbox</li>
+        <li>C) Table</li>
+        <li>D) Column</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(24)">Show Answer</button>
+    <div id="answer24" class="answer">Answer: B) Flexbox<br><strong>Explanation:</strong> React Native uses the Flexbox layout system for positioning and alignment.</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <p class="question">25. What does the <code>justifyContent</code> property control in Flexbox?</p>
+    <ul>
+        <li>A) Alignment along the main axis</li>
+        <li>B) Alignment along the cross axis</li>
+        <li>C) Spacing between elements</li>
+        <li>D) Element wrapping</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(25)">Show Answer</button>
+    <div id="answer25" class="answer">Answer: A) Alignment along the main axis<br><strong>Explanation:</strong> The <code>justifyContent</code> property defines how elements are distributed along the main axis.</div>
+</div>
+
+<!-- Question 26 -->
+<div class="question-container">
+    <p class="question">26. Which property controls the alignment of child elements in Flexbox?</p>
+    <ul>
+        <li>A) alignItems</li>
+        <li>B) justifyContent</li>
+        <li>C) alignSelf</li>
+        <li>D) flexWrap</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(26)">Show Answer</button>
+    <div id="answer26" class="answer">Answer: A) alignItems<br><strong>Explanation:</strong> The <code>alignItems</code> property aligns children along the cross axis.</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <p class="question">27. What is the role of the <code>TouchableOpacity</code> component?</p>
+    <ul>
+        <li>A) To manage opacity for images</li>
+        <li>B) To create clickable elements</li>
+        <li>C) To apply hover effects</li>
+        <li>D) To render text</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(27)">Show Answer</button>
+    <div id="answer27" class="answer">Answer: B) To create clickable elements<br><strong>Explanation:</strong> The <code>TouchableOpacity</code> component adds interactivity with visual feedback on press.</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <p class="question">28. What is the default Flexbox direction in React Native?</p>
+    <ul>
+        <li>A) row</li>
+        <li>B) column</li>
+        <li>C) row-reverse</li>
+        <li>D) column-reverse</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(28)">Show Answer</button>
+    <div id="answer28" class="answer">Answer: B) column<br><strong>Explanation:</strong> The default Flexbox direction in React Native is <code>column</code>, stacking elements vertically.</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <p class="question">29. Which property in Flexbox determines whether children are forced onto one line?</p>
+    <ul>
+        <li>A) flexWrap</li>
+        <li>B) flexDirection</li>
+        <li>C) alignItems</li>
+        <li>D) justifyContent</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(29)">Show Answer</button>
+    <div id="answer29" class="answer">Answer: A) flexWrap<br><strong>Explanation:</strong> The <code>flexWrap</code> property controls whether elements wrap onto multiple lines.</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <p class="question">30. What does the <code>require()</code> function do in React Native?</p>
+    <ul>
+        <li>A) It imports JavaScript files.</li>
+        <li>B) It fetches data from an API.</li>
+        <li>C) It ensures the existence of local assets.</li>
+        <li>D) It validates stylesheets.</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(30)">Show Answer</button>
+    <div id="answer30" class="answer">Answer: C) It ensures the existence of local assets.<br><strong>Explanation:</strong> The <code>require()</code> function loads static assets and ensures they are included during build time.</div>
+</div>
+  
+<footer>
+    <p>Created with ❤️ for Week 7 Practice!</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
