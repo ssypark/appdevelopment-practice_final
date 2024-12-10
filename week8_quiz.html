@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Week 8 - Navigation in React Native</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4682B4;
+        }
+
+        .question-container {
+            background: #fff;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .show-answer {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 1.1em;
+            color: #fff;
+            background: #4682B4;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .show-answer:hover {
+            background: #4169E1;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            background: #dff0d8;
+            border-left: 5px solid #4682B4;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Week 8 - Navigation in React Native</h1>
+
+<!-- Question 1 -->
+<div class="question-container">
+    <p class="question">1. Which library is used for navigation in React Native?</p>
+    <ul>
+        <li>A) React Navigation</li>
+        <li>B) React Router</li>
+        <li>C) Redux Navigator</li>
+        <li>D) Expo Navigation</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(1)">Show Answer</button>
+    <div id="answer1" class="answer">Answer: A) React Navigation<br><strong>Explanation:</strong> React Navigation is the most widely used library for handling navigation in React Native apps.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <p class="question">2. What is the purpose of a NavigationContainer in React Navigation?</p>
+    <ul>
+        <li>A) To manage app-wide state</li>
+        <li>B) To wrap all navigators in the app</li>
+        <li>C) To style the navigation bar</li>
+        <li>D) To handle animations</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(2)">Show Answer</button>
+    <div id="answer2" class="answer">Answer: B) To wrap all navigators in the app<br><strong>Explanation:</strong> NavigationContainer is a required component that encapsulates all navigators in a React Navigation app.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <p class="question">3. Which navigator allows switching between tabs?</p>
+    <ul>
+        <li>A) Stack Navigator</li>
+        <li>B) Bottom Tab Navigator</li>
+        <li>C) Drawer Navigator</li>
+        <li>D) Switch Navigator</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(3)">Show Answer</button>
+    <div id="answer3" class="answer">Answer: B) Bottom Tab Navigator<br><strong>Explanation:</strong> Bottom Tab Navigator is used to create tab-based navigation at the bottom of the screen.</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <p class="question">4. What is the initial screen in a navigator called?</p>
+    <ul>
+        <li>A) Home Screen</li>
+        <li>B) Default Screen</li>
+        <li>C) Root Screen</li>
+        <li>D) Initial Route</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(4)">Show Answer</button>
+    <div id="answer4" class="answer">Answer: D) Initial Route<br><strong>Explanation:</strong> The initial screen of a navigator is defined using the <code>initialRouteName</code> property.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <p class="question">5. Which property sets a custom title for a screen?</p>
+    <ul>
+        <li>A) headerTitle</li>
+        <li>B) title</li>
+        <li>C) screenName</li>
+        <li>D) screenTitle</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(5)">Show Answer</button>
+    <div id="answer5" class="answer">Answer: A) headerTitle<br><strong>Explanation:</strong> The <code>headerTitle</code> property customizes the title displayed in the screen's header.</div>
+</div>
+
+<!-- Question 6 -->
+<div class="question-container">
+    <p class="question">6. Which navigator is used for a swipeable side menu?</p>
+    <ul>
+        <li>A) Drawer Navigator</li>
+        <li>B) Bottom Tab Navigator</li>
+        <li>C) Stack Navigator</li>
+        <li>D) Side Menu Navigator</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(6)">Show Answer</button>
+    <div id="answer6" class="answer">Answer: A) Drawer Navigator<br><strong>Explanation:</strong> Drawer Navigator is used to implement a swipeable or toggleable side menu.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <p class="question">7. What command is used to install the React Navigation library?</p>
+    <ul>
+        <li>A) npm install react-navigation</li>
+        <li>B) npm install @react-navigation/native</li>
+        <li>C) expo install react-navigation</li>
+        <li>D) npm install react-navigation/core</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(7)">Show Answer</button>
+    <div id="answer7" class="answer">Answer: B) npm install @react-navigation/native<br><strong>Explanation:</strong> The correct command for installing React Navigation is <code>npm install @react-navigation/native</code>.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <p class="question">8. Which additional libraries are required for React Navigation?</p>
+    <ul>
+        <li>A) react-native-screens and react-native-safe-area-context</li>
+        <li>B) react-native-router and react-native-navigation</li>
+        <li>C) react-native-core and react-navigation-stack</li>
+        <li>D) expo-router and expo-navigation</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(8)">Show Answer</button>
+    <div id="answer8" class="answer">Answer: A) react-native-screens and react-native-safe-area-context<br><strong>Explanation:</strong> React Navigation requires additional dependencies like <code>react-native-screens</code> and <code>react-native-safe-area-context</code>.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+    <p class="question">9. How do you create a stack navigator?</p>
+    <ul>
+        <li>A) import { createStackNavigator } from '@react-navigation/native-stack';</li>
+        <li>B) import { createNavigator } from '@react-navigation/stack';</li>
+        <li>C) import { createStackNav } from 'react-native-navigation';</li>
+        <li>D) import { StackNavigator } from 'expo-navigation';</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(9)">Show Answer</button>
+    <div id="answer9" class="answer">Answer: A) import { createStackNavigator } from '@react-navigation/native-stack';<br><strong>Explanation:</strong> Use <code>createStackNavigator</code> from <code>@react-navigation/native-stack</code> to create stack-based navigation.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+    <p class="question">10. What method navigates to another screen in React Navigation?</p>
+    <ul>
+        <li>A) navigate()</li>
+        <li>B) goTo()</li>
+        <li>C) routeTo()</li>
+        <li>D) switchScreen()</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(10)">Show Answer</button>
+    <div id="answer10" class="answer">Answer: A) navigate()<br><strong>Explanation:</strong> The <code>navigate()</code> method is used to switch to another screen in React Navigation.</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+    <p class="question">11. What is the purpose of the <code>headerShown</code> option in screen configuration?</p>
+    <ul>
+        <li>A) To toggle the visibility of the screen's header</li>
+        <li>B) To change the header's color</li>
+        <li>C) To set the title of the header</li>
+        <li>D) To align the header text</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(11)">Show Answer</button>
+    <div id="answer11" class="answer">Answer: A) To toggle the visibility of the screen's header<br><strong>Explanation:</strong> The <code>headerShown</code> option determines whether the header is displayed for a screen.</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+    <p class="question">12. What is the main difference between stack and tab navigators?</p>
+    <ul>
+        <li>A) Stack navigators are vertical, tabs are horizontal</li>
+        <li>B) Stack navigators have headers, tabs do not</li>
+        <li>C) Stack navigators move between screens linearly, tabs allow switching between screens directly</li>
+        <li>D) Stack navigators use swipe gestures, tabs do not</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(12)">Show Answer</button>
+    <div id="answer12" class="answer">Answer: C) Stack navigators move between screens linearly, tabs allow switching between screens directly<br><strong>Explanation:</strong> Stack navigators maintain a history of screens, while tabs switch between screens without a history.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+    <p class="question">13. How do you pass parameters to a screen?</p>
+    <ul>
+        <li>A) Using <code>navigation.setParams()</code></li>
+        <li>B) By including parameters in <code>navigation.navigate()</code></li>
+        <li>C) Adding parameters to the screen's options</li>
+        <li>D) Using global state</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(13)">Show Answer</button>
+    <div id="answer13" class="answer">Answer: B) By including parameters in <code>navigation.navigate()</code><br><strong>Explanation:</strong> Parameters can be passed by including them in the <code>navigate()</code> method, such as <code>navigation.navigate('ScreenName', { paramKey: value })</code>.</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+    <p class="question">14. Which hook retrieves route parameters in a screen?</p>
+    <ul>
+        <li>A) useParams()</li>
+        <li>B) useNavigationParams()</li>
+        <li>C) useRoute()</li>
+        <li>D) useScreenParams()</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(14)">Show Answer</button>
+    <div id="answer14" class="answer">Answer: C) useRoute()<br><strong>Explanation:</strong> The <code>useRoute()</code> hook retrieves route parameters passed to a screen.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+    <p class="question">15. What component is required to group multiple navigators?</p>
+    <ul>
+        <li>A) NavigationContainer</li>
+        <li>B) NavigatorGroup</li>
+        <li>C) RootNavigator</li>
+        <li>D) AppContainer</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(15)">Show Answer</button>
+    <div id="answer15" class="answer">Answer: A) NavigationContainer<br><strong>Explanation:</strong> The <code>NavigationContainer</code> component is required to group multiple navigators in React Navigation.</div>
+</div>
+<!-- Question 16 -->
+<div class="question-container">
+    <p class="question">16. What does the <code>screenOptions</code> property in a navigator configure?</p>
+    <ul>
+        <li>A) Global styles and behaviors for all screens in the navigator</li>
+        <li>B) Animation settings for transitions</li>
+        <li>C) NavigationContainer themes</li>
+        <li>D) Gesture handling for a specific screen</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(16)">Show Answer</button>
+    <div id="answer16" class="answer">Answer: A) Global styles and behaviors for all screens in the navigator<br><strong>Explanation:</strong> The <code>screenOptions</code> property applies styles or configurations globally to all screens in a navigator.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+    <p class="question">17. Which navigator supports modals by default?</p>
+    <ul>
+        <li>A) Drawer Navigator</li>
+        <li>B) Stack Navigator</li>
+        <li>C) Bottom Tab Navigator</li>
+        <li>D) Modal Navigator</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(17)">Show Answer</button>
+    <div id="answer17" class="answer">Answer: B) Stack Navigator<br><strong>Explanation:</strong> Stack Navigator can display modals by specifying the <code>mode: 'modal'</code> option.</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+    <p class="question">18. How can you hide the tab bar for a specific screen in a Bottom Tab Navigator?</p>
+    <ul>
+        <li>A) Set <code>tabBarVisible: false</code> in screenOptions</li>
+        <li>B) Use the <code>hideTabBar</code> function</li>
+        <li>C) Add <code>display: none</code> in CSS</li>
+        <li>D) Set <code>tabBarStyle: { display: 'none' }</code> in options</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(18)">Show Answer</button>
+    <div id="answer18" class="answer">Answer: D) Set <code>tabBarStyle: { display: 'none' }</code> in options<br><strong>Explanation:</strong> To hide the tab bar for a specific screen, use <code>tabBarStyle</code> with the <code>display: 'none'</code> property.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+    <p class="question">19. What is the primary purpose of <code>react-native-screens</code> in navigation?</p>
+    <ul>
+        <li>A) To manage animations for transitions</li>
+        <li>B) To improve performance by using native screen management</li>
+        <li>C) To add default header styles</li>
+        <li>D) To enable gesture handling</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(19)">Show Answer</button>
+    <div id="answer19" class="answer">Answer: B) To improve performance by using native screen management<br><strong>Explanation:</strong> The <code>react-native-screens</code> library enhances performance by managing screens natively.</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+    <p class="question">20. What is the difference between <code>replace()</code> and <code>navigate()</code> in React Navigation?</p>
+    <ul>
+        <li>A) <code>replace()</code> removes the previous route, while <code>navigate()</code> adds to the stack</li>
+        <li>B) <code>replace()</code> is used for tabs, while <code>navigate()</code> is for stacks</li>
+        <li>C) <code>replace()</code> requires parameters, <code>navigate()</code> does not</li>
+        <li>D) Both perform the same function</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(20)">Show Answer</button>
+    <div id="answer20" class="answer">Answer: A) <code>replace()</code> removes the previous route, while <code>navigate()</code> adds to the stack<br><strong>Explanation:</strong> The <code>replace()</code> method replaces the current screen in the stack without adding a new one.</div>
+</div>
+
+<!-- Question 21 -->
+<div class="question-container">
+    <p class="question">21. How do you enable gestures for a screen?</p>
+    <ul>
+        <li>A) Use <code>gestureEnabled: true</code> in screenOptions</li>
+        <li>B) Add the <code>enableGestures</code> prop</li>
+        <li>C) Configure gestures in NavigationContainer</li>
+        <li>D) Use <code>swipeEnabled: true</code> in styles</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(21)">Show Answer</button>
+    <div id="answer21" class="answer">Answer: A) Use <code>gestureEnabled: true</code> in screenOptions<br><strong>Explanation:</strong> Gestures can be enabled for a screen using the <code>gestureEnabled</code> option in <code>screenOptions</code>.</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <p class="question">22. Which hook provides access to the navigation object?</p>
+    <ul>
+        <li>A) useNavigation()</li>
+        <li>B) useRoute()</li>
+        <li>C) useNavigate()</li>
+        <li>D) useHistory()</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(22)">Show Answer</button>
+    <div id="answer22" class="answer">Answer: A) useNavigation()<br><strong>Explanation:</strong> The <code>useNavigation()</code> hook allows access to the navigation object in functional components.</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <p class="question">23. How do you add a custom component to a header?</p>
+    <ul>
+        <li>A) Use <code>headerTitle: () => &lt;CustomComponent /&gt;</code></li>
+        <li>B) Set <code>customHeader</code> in screenOptions</li>
+        <li>C) Pass the component to <code>NavigationContainer</code></li>
+        <li>D) Modify <code>headerStyle</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(23)">Show Answer</button>
+    <div id="answer23" class="answer">Answer: A) Use <code>headerTitle: () => &lt;CustomComponent /&gt;</code><br><strong>Explanation:</strong> A custom component can be added to the header by setting <code>headerTitle</code> to a function that returns the component.</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <p class="question">24. What property changes the background color of the header?</p>
+    <ul>
+        <li>A) headerStyle</li>
+        <li>B) backgroundColor</li>
+        <li>C) headerBackground</li>
+        <li>D) themeColor</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(24)">Show Answer</button>
+    <div id="answer24" class="answer">Answer: A) headerStyle<br><strong>Explanation:</strong> The <code>headerStyle</code> property is used to apply styles, including background color, to the header.</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <p class="question">25. Which navigator is most suitable for a master-detail layout?</p>
+    <ul>
+        <li>A) Stack Navigator</li>
+        <li>B) Drawer Navigator</li>
+        <li>C) Bottom Tab Navigator</li>
+        <li>D) Nested Navigators</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(25)">Show Answer</button>
+    <div id="answer25" class="answer">Answer: A) Stack Navigator<br><strong>Explanation:</strong> Stack Navigator is commonly used for master-detail layouts due to its ability to push and pop screens.</div>
+</div>
+
+<!-- Question 26 -->
+<div class="question-container">
+    <p class="question">26. What is the purpose of nested navigators in React Navigation?</p>
+    <ul>
+        <li>A) To create hierarchical navigation structures</li>
+        <li>B) To share navigation parameters between apps</li>
+        <li>C) To add gestures to all screens</li>
+        <li>D) To apply global screen styles</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(26)">Show Answer</button>
+    <div id="answer26" class="answer">Answer: A) To create hierarchical navigation structures<br><strong>Explanation:</strong> Nested navigators allow the creation of complex, hierarchical navigation patterns.</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <p class="question">27. What is the difference between <code>push()</code> and <code>navigate()</code> in React Navigation?</p>
+    <ul>
+        <li>A) <code>push()</code> adds a duplicate screen to the stack, <code>navigate()</code> does not</li>
+        <li>B) <code>push()</code> is for tabs, <code>navigate()</code> is for stacks</li>
+        <li>C) <code>push()</code> requires parameters, <code>navigate()</code> does not</li>
+        <li>D) Both perform the same function</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(27)">Show Answer</button>
+    <div id="answer27" class="answer">Answer: A) <code>push()</code> adds a duplicate screen to the stack, <code>navigate()</code> does not<br><strong>Explanation:</strong> The <code>push()</code> method adds a new instance of a screen, while <code>navigate()</code> navigates to an existing instance if it’s already in the stack.</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <p class="question">28. How do you style the tab bar in a Bottom Tab Navigator?</p>
+    <ul>
+        <li>A) Use the <code>tabBarOptions</code> property</li>
+        <li>B) Modify <code>screenOptions</code></li>
+        <li>C) Apply styles to <code>NavigationContainer</code></li>
+        <li>D) Use <code>tabBarStyle</code> in the navigator's options</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(28)">Show Answer</button>
+    <div id="answer28" class="answer">Answer: D) Use <code>tabBarStyle</code> in the navigator's options<br><strong>Explanation:</strong> The <code>tabBarStyle</code> property is used to style the tab bar in a Bottom Tab Navigator.</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <p class="question">29. What happens if you set <code>headerShown: false</code> in screen options?</p>
+    <ul>
+        <li>A) The header will be hidden for that specific screen</li>
+        <li>B) The header will be hidden globally</li>
+        <li>C) The header will display an error message</li>
+        <li>D) The screen will not load</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(29)">Show Answer</button>
+    <div id="answer29" class="answer">Answer: A) The header will be hidden for that specific screen<br><strong>Explanation:</strong> Setting <code>headerShown: false</code> in <code>screenOptions</code> hides the header for the specified screen.</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <p class="question">30. Which React Navigation feature helps in adding animations between screen transitions?</p>
+    <ul>
+        <li>A) TransitionSpec</li>
+        <li>B) AnimationHandler</li>
+        <li>C) GestureSpec</li>
+        <li>D) TransitionStyle</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(30)">Show Answer</button>
+    <div id="answer30" class="answer">Answer: A) TransitionSpec<br><strong>Explanation:</strong> The <code>TransitionSpec</code> property in React Navigation allows customizing animations for screen transitions.</div>
+</div>
+  
+<footer>
+    <p>Created for Week 8 Practice</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
