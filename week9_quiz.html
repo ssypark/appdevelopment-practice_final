@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Week 9 - State Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF5733;
+        }
+
+        .question-container {
+            background: #fff;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .show-answer {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 1.1em;
+            color: #fff;
+            background: #FF5733;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .show-answer:hover {
+            background: #C0392B;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            background: #dff0d8;
+            border-left: 5px solid #FF5733;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Week 9 - State Management</h1>
+
+
+<!-- Question 1 -->
+<div class="question-container">
+    <p class="question">1. What is the primary purpose of state in React Native?</p>
+    <ul>
+        <li>A) To manage dynamic data within a component</li>
+        <li>B) To store global variables</li>
+        <li>C) To handle API calls</li>
+        <li>D) To connect navigation components</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(1)">Show Answer</button>
+    <div id="answer1" class="answer">Answer: A) To manage dynamic data within a component<br><strong>Explanation:</strong> State is used to manage data that affects the rendering of a component.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <p class="question">2. What hook is used to create state in functional components?</p>
+    <ul>
+        <li>A) useState</li>
+        <li>B) useEffect</li>
+        <li>C) useContext</li>
+        <li>D) useReducer</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(2)">Show Answer</button>
+    <div id="answer2" class="answer">Answer: A) useState<br><strong>Explanation:</strong> The <code>useState</code> hook is used to manage state in functional components.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <p class="question">3. What function is used to update state when using the <code>useState</code> hook?</p>
+    <ul>
+        <li>A) setState</li>
+        <li>B) updateState</li>
+        <li>C) set</li>
+        <li>D) changeState</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(3)">Show Answer</button>
+    <div id="answer3" class="answer">Answer: A) setState<br><strong>Explanation:</strong> The setter function returned by <code>useState</code> (e.g., <code>setState</code>) is used to update the state value.</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <p class="question">4. What does passing an empty array <code>[]</code> as a dependency to <code>useEffect</code> do?</p>
+    <ul>
+        <li>A) Ensures the effect runs only once</li>
+        <li>B) Runs the effect on every render</li>
+        <li>C) Triggers the effect only when props change</li>
+        <li>D) Causes the component to re-render infinitely</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(4)">Show Answer</button>
+    <div id="answer4" class="answer">Answer: A) Ensures the effect runs only once<br><strong>Explanation:</strong> Passing an empty array makes the effect run only after the initial render.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <p class="question">5. How do you clean up side effects in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) Return a cleanup function</li>
+        <li>B) Call <code>clean()</code></li>
+        <li>C) Use a try-finally block</li>
+        <li>D) Set the dependency array to <code>null</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(5)">Show Answer</button>
+    <div id="answer5" class="answer">Answer: A) Return a cleanup function<br><strong>Explanation:</strong> To clean up side effects (e.g., subscriptions or timers), <code>useEffect</code> can return a cleanup function.</div>
+</div>
+<!-- Question 6 -->
+<div class="question-container">
+    <p class="question">6. What is the purpose of the dependency array in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) To run the effect only when the specified values change</li>
+        <li>B) To trigger updates to props</li>
+        <li>C) To reset state after each render</li>
+        <li>D) To avoid re-renders</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(6)">Show Answer</button>
+    <div id="answer6" class="answer">Answer: A) To run the effect only when the specified values change<br><strong>Explanation:</strong> The dependency array determines when the effect should re-run, based on changes in the specified values.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <p class="question">7. What happens if you omit the dependency array in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) The effect runs on every render</li>
+        <li>B) The effect runs only once</li>
+        <li>C) The effect doesn't run at all</li>
+        <li>D) The component stops rendering</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(7)">Show Answer</button>
+    <div id="answer7" class="answer">Answer: A) The effect runs on every render<br><strong>Explanation:</strong> Omitting the dependency array causes <code>useEffect</code> to run after every render cycle.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <p class="question">8. What type of data structure does the <code>useState</code> hook return?</p>
+    <ul>
+        <li>A) An object with state and setter functions</li>
+        <li>B) A single value</li>
+        <li>C) An array with the state variable and a function to update it</li>
+        <li>D) A string with state information</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(8)">Show Answer</button>
+    <div id="answer8" class="answer">Answer: C) An array with the state variable and a function to update it<br><strong>Explanation:</strong> <code>useState</code> returns a two-element array: the current state value and a function to update it.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+    <p class="question">9. How do you set the initial value of a state variable using <code>useState</code>?</p>
+    <ul>
+        <li>A) Pass the value as an argument to <code>useState()</code></li>
+        <li>B) Assign it directly to the variable</li>
+        <li>C) Use <code>setState()</code> immediately</li>
+        <li>D) Use a constructor function</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(9)">Show Answer</button>
+    <div id="answer9" class="answer">Answer: A) Pass the value as an argument to <code>useState()</code><br><strong>Explanation:</strong> The initial value is provided as an argument to <code>useState()</code>, e.g., <code>useState(0)</code>.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+    <p class="question">10. What should you avoid when directly updating a state variable?</p>
+    <ul>
+        <li>A) Mutating the state object</li>
+        <li>B) Using the <code>setState()</code> function</li>
+        <li>C) Logging the state value</li>
+        <li>D) Passing a callback to update the state</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(10)">Show Answer</button>
+    <div id="answer10" class="answer">Answer: A) Mutating the state object<br><strong>Explanation:</strong> State should never be mutated directly. Always use the setter function returned by <code>useState</code>.</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+    <p class="question">11. What happens if you call the state setter function with the same value as the current state?</p>
+    <ul>
+        <li>A) The component does not re-render</li>
+        <li>B) The component re-renders unnecessarily</li>
+        <li>C) The state becomes undefined</li>
+        <li>D) An error is thrown</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(11)">Show Answer</button>
+    <div id="answer11" class="answer">Answer: A) The component does not re-render<br><strong>Explanation:</strong> React optimizes renders and avoids unnecessary re-renders if the state value does not change.</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+    <p class="question">12. What lifecycle behavior does <code>useEffect</code> mimic when used with an empty dependency array?</p>
+    <ul>
+        <li>A) componentDidMount</li>
+        <li>B) componentDidUpdate</li>
+        <li>C) componentWillUnmount</li>
+        <li>D) render</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(12)">Show Answer</button>
+    <div id="answer12" class="answer">Answer: A) componentDidMount<br><strong>Explanation:</strong> When <code>useEffect</code> is provided with an empty dependency array, it mimics the behavior of <code>componentDidMount</code>.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+    <p class="question">13. How do you clean up a timer set in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) Clear the timer in the cleanup function</li>
+        <li>B) Use <code>setState(null)</code></li>
+        <li>C) Call <code>useState()</code> again</li>
+        <li>D) Return <code>null</code> from <code>useEffect</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(13)">Show Answer</button>
+    <div id="answer13" class="answer">Answer: A) Clear the timer in the cleanup function<br><strong>Explanation:</strong> Cleanup functions in <code>useEffect</code> should clear timers using <code>clearTimeout()</code> or <code>clearInterval()</code>.</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+    <p class="question">14. What value does <code>useState()</code> return when no initial value is provided?</p>
+    <ul>
+        <li>A) undefined</li>
+        <li>B) null</li>
+        <li>C) 0</li>
+        <li>D) An empty string</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(14)">Show Answer</button>
+    <div id="answer14" class="answer">Answer: A) undefined<br><strong>Explanation:</strong> If no initial value is provided, the state variable is initialized as <code>undefined</code>.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+    <p class="question">15. When should you avoid using the <code>useEffect</code> hook?</p>
+    <ul>
+        <li>A) When no side effects are needed</li>
+        <li>B) When updating state</li>
+        <li>C) When fetching data</li>
+        <li>D) When adding event listeners</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(15)">Show Answer</button>
+    <div id="answer15" class="answer">Answer: A) When no side effects are needed<br><strong>Explanation:</strong> <code>useEffect</code> is only necessary when there are side effects to manage, such as data fetching or subscriptions.</div>
+</div>
+<!-- Question 16 -->
+<div class="question-container">
+    <p class="question">16. What is the purpose of the cleanup function in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) To remove side effects before the component unmounts or re-runs</li>
+        <li>B) To reset the state of the component</li>
+        <li>C) To prevent state updates</li>
+        <li>D) To optimize re-renders</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(16)">Show Answer</button>
+    <div id="answer16" class="answer">Answer: A) To remove side effects before the component unmounts or re-runs<br><strong>Explanation:</strong> The cleanup function in <code>useEffect</code> removes side effects such as subscriptions, timers, or event listeners.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+    <p class="question">17. What happens if you provide incorrect dependencies in the <code>useEffect</code> dependency array?</p>
+    <ul>
+        <li>A) The effect might not run as expected</li>
+        <li>B) The component will crash</li>
+        <li>C) The state becomes undefined</li>
+        <li>D) An error is thrown</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(17)">Show Answer</button>
+    <div id="answer17" class="answer">Answer: A) The effect might not run as expected<br><strong>Explanation:</strong> Incorrect dependencies can cause the effect to run at unexpected times or fail to respond to changes correctly.</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+    <p class="question">18. Can you use multiple <code>useEffect</code> hooks in a single component?</p>
+    <ul>
+        <li>A) Yes, each can handle a separate side effect</li>
+        <li>B) No, only one <code>useEffect</code> is allowed</li>
+        <li>C) Yes, but they must share the same dependencies</li>
+        <li>D) No, it will cause a conflict</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(18)">Show Answer</button>
+    <div id="answer18" class="answer">Answer: A) Yes, each can handle a separate side effect<br><strong>Explanation:</strong> You can use multiple <code>useEffect</code> hooks in a component to handle different side effects independently.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+    <p class="question">19. What does <code>useEffect</code> return?</p>
+    <ul>
+        <li>A) A cleanup function</li>
+        <li>B) A value to update state</li>
+        <li>C) A JSX element</li>
+        <li>D) Nothing</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(19)">Show Answer</button>
+    <div id="answer19" class="answer">Answer: D) Nothing<br><strong>Explanation:</strong> <code>useEffect</code> itself does not return a value. However, it can optionally return a cleanup function.</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+    <p class="question">20. What is the primary advantage of using functional components with hooks like <code>useState</code> and <code>useEffect</code>?</p>
+    <ul>
+        <li>A) Simplifies state and lifecycle management</li>
+        <li>B) Improves render performance</li>
+        <li>C) Reduces the need for props</li>
+        <li>D) Eliminates re-renders</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(20)">Show Answer</button>
+    <div id="answer20" class="answer">Answer: A) Simplifies state and lifecycle management<br><strong>Explanation:</strong> Hooks simplify managing state and side effects in functional components without requiring class components.</div>
+</div>
+
+<!-- Question 21 -->
+<div class="question-container">
+    <p class="question">21. Which of the following is true about the dependency array in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) It must always include all variables used in the effect</li>
+        <li>B) It is optional, but omitting it runs the effect after every render</li>
+        <li>C) It should always be empty</li>
+        <li>D) It cannot contain state variables</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(21)">Show Answer</button>
+    <div id="answer21" class="answer">Answer: B) It is optional, but omitting it runs the effect after every render<br><strong>Explanation:</strong> Omitting the dependency array makes the effect run after every render, while including variables ensures it runs only when those variables change.</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <p class="question">22. What happens when <code>setState</code> is called in a functional component?</p>
+    <ul>
+        <li>A) React schedules a re-render of the component</li>
+        <li>B) The entire application is reloaded</li>
+        <li>C) State variables are reset to their initial values</li>
+        <li>D) The DOM is updated directly</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(22)">Show Answer</button>
+    <div id="answer22" class="answer">Answer: A) React schedules a re-render of the component<br><strong>Explanation:</strong> Calling <code>setState</code> schedules a re-render of the component to reflect the updated state.</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <p class="question">23. What should you include in the dependency array of <code>useEffect</code>?</p>
+    <ul>
+        <li>A) All variables and props used inside the effect</li>
+        <li>B) Only variables that change state</li>
+        <li>C) Only global variables</li>
+        <li>D) Nothing</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(23)">Show Answer</button>
+    <div id="answer23" class="answer">Answer: A) All variables and props used inside the effect<br><strong>Explanation:</strong> To ensure correct behavior, include all variables and props referenced inside the effect in the dependency array.</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <p class="question">24. What is the primary use case for <code>useState</code>?</p>
+    <ul>
+        <li>A) Managing local state within a functional component</li>
+        <li>B) Sharing state across multiple components</li>
+        <li>C) Optimizing renders</li>
+        <li>D) Handling API requests</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(24)">Show Answer</button>
+    <div id="answer24" class="answer">Answer: A) Managing local state within a functional component<br><strong>Explanation:</strong> <code>useState</code> is designed to manage local component state in functional components.</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <p class="question">25. What is the return value of the <code>useEffect</code> hook?</p>
+    <ul>
+        <li>A) A cleanup function or nothing</li>
+        <li>B) A state variable</li>
+        <li>C) A new component</li>
+        <li>D) A JSX element</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(25)">Show Answer</button>
+    <div id="answer25" class="answer">Answer: A) A cleanup function or nothing<br><strong>Explanation:</strong> <code>useEffect</code> optionally returns a cleanup function; otherwise, it returns nothing.</div>
+</div>
+
+<!-- Question 26 -->
+<div class="question-container">
+    <p class="question">26. What happens if you omit the second argument (dependency array) in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) The effect runs after every render</li>
+        <li>B) The effect runs only once</li>
+        <li>C) The effect doesn't run at all</li>
+        <li>D) The effect causes an error</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(26)">Show Answer</button>
+    <div id="answer26" class="answer">Answer: A) The effect runs after every render<br><strong>Explanation:</strong> Omitting the dependency array causes <code>useEffect</code> to run after every render cycle.</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <p class="question">27. What is a common mistake when using the dependency array in <code>useEffect</code>?</p>
+    <ul>
+        <li>A) Omitting variables that are used inside the effect</li>
+        <li>B) Including only state variables</li>
+        <li>C) Using an empty array</li>
+        <li>D) Providing the wrong data type</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(27)">Show Answer</button>
+    <div id="answer27" class="answer">Answer: A) Omitting variables that are used inside the effect<br><strong>Explanation:</strong> Failing to include variables referenced in the effect can lead to unexpected behavior.</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <p class="question">28. How do you initialize state using the <code>useState</code> hook?</p>
+    <ul>
+        <li>A) Pass an initial value to the <code>useState</code> function</li>
+        <li>B) Assign a value directly to the state variable</li>
+        <li>C) Use a constructor to set the state</li>
+        <li>D) Set the value in a lifecycle method</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(28)">Show Answer</button>
+    <div id="answer28" class="answer">Answer: A) Pass an initial value to the <code>useState</code> function<br><strong>Explanation:</strong> State is initialized by passing an initial value as an argument to <code>useState</code>, e.g., <code>useState(0)</code>.</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <p class="question">29. When does the cleanup function in <code>useEffect</code> get executed?</p>
+    <ul>
+        <li>A) Before the component unmounts or the effect re-runs</li>
+        <li>B) Immediately after the component mounts</li>
+        <li>C) During every render</li>
+        <li>D) Only when the dependency array is empty</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(29)">Show Answer</button>
+    <div id="answer29" class="answer">Answer: A) Before the component unmounts or the effect re-runs<br><strong>Explanation:</strong> The cleanup function runs before the component unmounts or when the effect is about to re-run due to dependency changes.</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <p class="question">30. What is a key advantage of using hooks like <code>useState</code> and <code>useEffect</code>?</p>
+    <ul>
+        <li>A) Enables state and side effects in functional components</li>
+        <li>B) Improves app performance by default</li>
+        <li>C) Reduces the need for CSS styling</li>
+        <li>D) Makes React compatible with other libraries</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(30)">Show Answer</button>
+    <div id="answer30" class="answer">Answer: A) Enables state and side effects in functional components<br><strong>Explanation:</strong> Hooks like <code>useState</code> and <code>useEffect</code> allow functional components to manage state and lifecycle events.</div>
+</div>
+  
+<footer>
+    <p>Created for Week 9 Practice</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
