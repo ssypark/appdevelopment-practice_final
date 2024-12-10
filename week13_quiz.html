@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Week 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #673AB7;
+        }
+
+        .question-container {
+            background: #fff;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .show-answer {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 1.1em;
+            color: #fff;
+            background: #673AB7;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .show-answer:hover {
+            background: #4527A0;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            background: #dff0d8;
+            border-left: 5px solid #673AB7;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Week 13</h1>
+
+<!-- Question 1 -->
+<div class="question-container">
+    <p class="question">1. What is the purpose of Expo in React Native development?</p>
+    <ul>
+        <li>A) To simplify the setup and development process</li>
+        <li>B) To manage state across components</li>
+        <li>C) To handle navigation between screens</li>
+        <li>D) To fetch data from APIs</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(1)">Show Answer</button>
+    <div id="answer1" class="answer">Answer: A) To simplify the setup and development process<br><strong>Explanation:</strong> Expo provides tools and libraries to streamline React Native app development.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <p class="question">2. What command is used to start a new project in Expo?</p>
+    <ul>
+        <li>A) <code>expo init</code></li>
+        <li>B) <code>expo start</code></li>
+        <li>C) <code>npm start</code></li>
+        <li>D) <code>react-native init</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(2)">Show Answer</button>
+    <div id="answer2" class="answer">Answer: A) <code>expo init</code><br><strong>Explanation:</strong> The <code>expo init</code> command initializes a new Expo project.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <p class="question">3. What is the purpose of the Expo CLI?</p>
+    <ul>
+        <li>A) To manage and develop Expo projects</li>
+        <li>B) To create custom navigation components</li>
+        <li>C) To optimize the app's performance</li>
+        <li>D) To handle animations in React Native</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(3)">Show Answer</button>
+    <div id="answer3" class="answer">Answer: A) To manage and develop Expo projects<br><strong>Explanation:</strong> The Expo CLI provides commands to create, develop, and build Expo apps.</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <p class="question">4. What does the Expo Go app allow you to do?</p>
+    <ul>
+        <li>A) Preview your app on a mobile device</li>
+        <li>B) Deploy your app to the App Store</li>
+        <li>C) Manage project dependencies</li>
+        <li>D) Set up navigation in your app</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(4)">Show Answer</button>
+    <div id="answer4" class="answer">Answer: A) Preview your app on a mobile device<br><strong>Explanation:</strong> The Expo Go app allows developers to view and test their React Native apps on real devices without building native binaries.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <p class="question">5. How do you run an Expo project on an Android emulator?</p>
+    <ul>
+        <li>A) Start the emulator and run <code>expo start</code></li>
+        <li>B) Use <code>expo android</code> command</li>
+        <li>C) Download the app from the Play Store</li>
+        <li>D) Use <code>npm android</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(5)">Show Answer</button>
+    <div id="answer5" class="answer">Answer: A) Start the emulator and run <code>expo start</code><br><strong>Explanation:</strong> After starting the emulator, you can run <code>expo start</code> to open the app in the Android emulator.</div>
+</div>
+<!-- Question 6 -->
+<div class="question-container">
+    <p class="question">6. What does the "expo publish" command do?</p>
+    <ul>
+        <li>A) Updates your app on the Expo servers</li>
+        <li>B) Deploys your app to the App Store</li>
+        <li>C) Installs dependencies for your project</li>
+        <li>D) Builds a standalone APK</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(6)">Show Answer</button>
+    <div id="answer6" class="answer">Answer: A) Updates your app on the Expo servers<br><strong>Explanation:</strong> The <code>expo publish</code> command uploads your latest app changes to the Expo servers, making them available to users.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <p class="question">7. What is the purpose of the "expo build" command?</p>
+    <ul>
+        <li>A) To create a standalone binary for your app</li>
+        <li>B) To start the development server</li>
+        <li>C) To update your app's dependencies</li>
+        <li>D) To test the app in an emulator</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(7)">Show Answer</button>
+    <div id="answer7" class="answer">Answer: A) To create a standalone binary for your app<br><strong>Explanation:</strong> The <code>expo build</code> command generates standalone binaries (APK/IPA) for deployment to app stores.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <p class="question">8. How do you add a new dependency to an Expo project?</p>
+    <ul>
+        <li>A) Use <code>expo install</code></li>
+        <li>B) Use <code>npm add</code></li>
+        <li>C) Use <code>expo dependency</code></li>
+        <li>D) Use <code>expo add</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(8)">Show Answer</button>
+    <div id="answer8" class="answer">Answer: A) Use <code>expo install</code><br><strong>Explanation:</strong> The <code>expo install</code> command ensures compatibility with the current Expo SDK when adding dependencies.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+    <p class="question">9. What is an Expo managed workflow?</p>
+    <ul>
+        <li>A) A development setup where Expo handles native configurations</li>
+        <li>B) A workflow requiring full control over native code</li>
+        <li>C) A CLI tool for testing apps</li>
+        <li>D) A setup for building desktop applications</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(9)">Show Answer</button>
+    <div id="answer9" class="answer">Answer: A) A development setup where Expo handles native configurations<br><strong>Explanation:</strong> The managed workflow abstracts native code configurations, allowing developers to focus on JavaScript.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+    <p class="question">10. What does the "eject" command do in Expo?</p>
+    <ul>
+        <li>A) Converts a managed workflow project to a bare workflow</li>
+        <li>B) Removes all dependencies from the project</li>
+        <li>C) Deletes the Expo CLI</li>
+        <li>D) Optimizes assets for production</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(10)">Show Answer</button>
+    <div id="answer10" class="answer">Answer: A) Converts a managed workflow project to a bare workflow<br><strong>Explanation:</strong> The <code>eject</code> command allows access to native configurations by converting the project to a bare workflow.</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+    <p class="question">11. What is the "bare workflow" in Expo?</p>
+    <ul>
+        <li>A) A workflow giving full access to native code</li>
+        <li>B) A workflow for web development</li>
+        <li>C) A setup for testing app UI</li>
+        <li>D) A lightweight version of the Expo Go app</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(11)">Show Answer</button>
+    <div id="answer11" class="answer">Answer: A) A workflow giving full access to native code<br><strong>Explanation:</strong> The bare workflow provides complete control over native code, enabling custom native features.</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+    <p class="question">12. How do you optimize assets in an Expo project?</p>
+    <ul>
+        <li>A) Use <code>expo-optimize</code></li>
+        <li>B) Use <code>npm optimize</code></li>
+        <li>C) Use <code>expo compress</code></li>
+        <li>D) Use <code>expo deploy</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(12)">Show Answer</button>
+    <div id="answer12" class="answer">Answer: A) Use <code>expo-optimize</code><br><strong>Explanation:</strong> The <code>expo-optimize</code> command compresses and optimizes assets for production.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+    <p class="question">13. What is the purpose of the Expo Snack tool?</p>
+    <ul>
+        <li>A) To quickly prototype and test React Native code</li>
+        <li>B) To manage project dependencies</li>
+        <li>C) To deploy apps to app stores</li>
+        <li>D) To convert projects to bare workflow</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(13)">Show Answer</button>
+    <div id="answer13" class="answer">Answer: A) To quickly prototype and test React Native code<br><strong>Explanation:</strong> Expo Snack is an online editor for creating and testing React Native apps instantly.</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+    <p class="question">14. What is the Expo SDK?</p>
+    <ul>
+        <li>A) A set of pre-built libraries and tools for React Native</li>
+        <li>B) A CLI tool for managing Expo projects</li>
+        <li>C) A debugging tool for native modules</li>
+        <li>D) A platform for deploying web apps</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(14)">Show Answer</button>
+    <div id="answer14" class="answer">Answer: A) A set of pre-built libraries and tools for React Native<br><strong>Explanation:</strong> The Expo SDK includes features like camera access, push notifications, and more, tailored for React Native apps.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+    <p class="question">15. What command is used to open an Expo project in a web browser?</p>
+    <ul>
+        <li>A) <code>expo start --web</code></li>
+        <li>B) <code>expo web</code></li>
+        <li>C) <code>npm start web</code></li>
+        <li>D) <code>expo deploy</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(15)">Show Answer</button>
+    <div id="answer15" class="answer">Answer: A) <code>expo start --web</code><br><strong>Explanation:</strong> The <code>expo start --web</code> command runs the project in a web browser using Expo's web support.</div>
+</div>
+
+  <!-- Question 16 -->
+<div class="question-container">
+    <p class="question">16. What is the difference between "expo build" and "expo export"?</p>
+    <ul>
+        <li>A) "expo build" creates binaries, while "expo export" creates a static bundle for hosting</li>
+        <li>B) "expo build" optimizes assets, while "expo export" installs dependencies</li>
+        <li>C) "expo build" is for managed workflow, while "expo export" is for bare workflow</li>
+        <li>D) There is no difference</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(16)">Show Answer</button>
+    <div id="answer16" class="answer">Answer: A) "expo build" creates binaries, while "expo export" creates a static bundle for hosting<br><strong>Explanation:</strong> <code>expo build</code> generates app store binaries, while <code>expo export</code> creates files for hosting on static servers.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+    <p class="question">17. What is the purpose of "expo upgrade"?</p>
+    <ul>
+        <li>A) To update the project to the latest Expo SDK</li>
+        <li>B) To optimize app performance</li>
+        <li>C) To convert a project to bare workflow</li>
+        <li>D) To build the app for production</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(17)">Show Answer</button>
+    <div id="answer17" class="answer">Answer: A) To update the project to the latest Expo SDK<br><strong>Explanation:</strong> The <code>expo upgrade</code> command updates the app to the latest version of the Expo SDK.</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+    <p class="question">18. What does the "expo start --ios" command do?</p>
+    <ul>
+        <li>A) Opens the app in an iOS simulator</li>
+        <li>B) Builds the app for iOS</li>
+        <li>C) Publishes the app to the App Store</li>
+        <li>D) Optimizes assets for iOS</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(18)">Show Answer</button>
+    <div id="answer18" class="answer">Answer: A) Opens the app in an iOS simulator<br><strong>Explanation:</strong> The <code>expo start --ios</code> command runs the app on an iOS simulator for testing.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+    <p class="question">19. How do you specify the target platform when using "expo build"?</p>
+    <ul>
+        <li>A) Use the <code>--platform</code> flag</li>
+        <li>B) Modify the app.json file</li>
+        <li>C) Add the <code>expo-target</code> property</li>
+        <li>D) Use <code>expo platform</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(19)">Show Answer</button>
+    <div id="answer19" class="answer">Answer: A) Use the <code>--platform</code> flag<br><strong>Explanation:</strong> The <code>--platform</code> flag specifies whether to build for iOS or Android.</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+    <p class="question">20. What is the purpose of the "app.json" file in an Expo project?</p>
+    <ul>
+        <li>A) To configure the app's metadata and settings</li>
+        <li>B) To list all dependencies</li>
+        <li>C) To store navigation routes</li>
+        <li>D) To define component hierarchy</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(20)">Show Answer</button>
+    <div id="answer20" class="answer">Answer: A) To configure the app's metadata and settings<br><strong>Explanation:</strong> The <code>app.json</code> file contains configuration details like app name, icon, and permissions.</div>
+</div>
+
+<!-- Question 21 -->
+<div class="question-container">
+    <p class="question">21. How do you generate an APK using Expo?</p>
+    <ul>
+        <li>A) Run <code>expo build:android</code></li>
+        <li>B) Use <code>expo apk</code></li>
+        <li>C) Run <code>expo build</code></li>
+        <li>D) Use <code>expo optimize</code></li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(21)">Show Answer</button>
+    <div id="answer21" class="answer">Answer: A) Run <code>expo build:android</code><br><strong>Explanation:</strong> The <code>expo build:android</code> command generates an APK for Android devices.</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <p class="question">22. What is the default port used by the Expo development server?</p>
+    <ul>
+        <li>A) 19000</li>
+        <li>B) 8080</li>
+        <li>C) 3000</li>
+        <li>D) 5000</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(22)">Show Answer</button>
+    <div id="answer22" class="answer">Answer: A) 19000<br><strong>Explanation:</strong> The Expo development server runs on port 19000 by default.</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <p class="question">23. What is the purpose of the "expo login" command?</p>
+    <ul>
+        <li>A) To log into an Expo account</li>
+        <li>B) To deploy the app to Expo servers</li>
+        <li>C) To connect to an Android emulator</li>
+        <li>D) To add Expo dependencies</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(23)">Show Answer</button>
+    <div id="answer23" class="answer">Answer: A) To log into an Expo account<br><strong>Explanation:</strong> The <code>expo login</code> command authenticates the user with their Expo account.</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <p class="question">24. What is the use of "expo install expo-camera"?</p>
+    <ul>
+        <li>A) To add camera functionality to the app</li>
+        <li>B) To optimize camera settings</li>
+        <li>C) To test the app on a physical device</li>
+        <li>D) To configure the app for deployment</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(24)">Show Answer</button>
+    <div id="answer24" class="answer">Answer: A) To add camera functionality to the app<br><strong>Explanation:</strong> The <code>expo-camera</code> package provides camera functionality for Expo projects.</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <p class="question">25. What is the "expo build:web" command used for?</p>
+    <ul>
+        <li>A) To build a static website version of the app</li>
+        <li>B) To deploy the app to Expo servers</li>
+        <li>C) To add web-specific dependencies</li>
+        <li>D) To optimize the app for mobile devices</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(25)">Show Answer</button>
+    <div id="answer25" class="answer">Answer: A) To build a static website version of the app<br><strong>Explanation:</strong> The <code>expo build:web</code> command creates a web-optimized version of the app.</div>
+</div>
+
+  <!-- Question 26 -->
+<div class="question-container">
+    <p class="question">26. What is the "expo update" command used for?</p>
+    <ul>
+        <li>A) To update the Expo CLI</li>
+        <li>B) To upgrade app dependencies</li>
+        <li>C) To fetch the latest updates for an Expo project</li>
+        <li>D) To refresh the app's build process</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(26)">Show Answer</button>
+    <div id="answer26" class="answer">Answer: C) To fetch the latest updates for an Expo project<br><strong>Explanation:</strong> The <code>expo update</code> command updates the Expo CLI and SDK in an existing project.</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <p class="question">27. What is the purpose of the "expo push:android" command?</p>
+    <ul>
+        <li>A) To send push notifications to Android devices</li>
+        <li>B) To deploy the app to Google Play</li>
+        <li>C) To optimize Android-specific resources</li>
+        <li>D) To build an APK for Android</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(27)">Show Answer</button>
+    <div id="answer27" class="answer">Answer: A) To send push notifications to Android devices<br><strong>Explanation:</strong> The <code>expo push:android</code> command handles push notifications for Android users.</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <p class="question">28. How can you debug an Expo app using a physical device?</p>
+    <ul>
+        <li>A) Connect the device and scan the QR code from Expo CLI</li>
+        <li>B) Use <code>expo debug</code> command</li>
+        <li>C) Deploy the app to a web browser</li>
+        <li>D) Enable developer tools in the Expo Go app</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(28)">Show Answer</button>
+    <div id="answer28" class="answer">Answer: A) Connect the device and scan the QR code from Expo CLI<br><strong>Explanation:</strong> Scanning the QR code provided by the Expo CLI links the physical device to the development server.</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <p class="question">29. What is the significance of "expo-notifications" in an Expo project?</p>
+    <ul>
+        <li>A) To handle push notifications</li>
+        <li>B) To send app updates to users</li>
+        <li>C) To log app errors</li>
+        <li>D) To optimize app performance</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(29)">Show Answer</button>
+    <div id="answer29" class="answer">Answer: A) To handle push notifications<br><strong>Explanation:</strong> The <code>expo-notifications</code> library manages the receipt and handling of push notifications in an Expo app.</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <p class="question">30. What does "expo start --clear" do?</p>
+    <ul>
+        <li>A) Clears the development cache and restarts the server</li>
+        <li>B) Optimizes assets for production</li>
+        <li>C) Deletes unused dependencies</li>
+        <li>D) Restores the default Expo configuration</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(30)">Show Answer</button>
+    <div id="answer30" class="answer">Answer: A) Clears the development cache and restarts the server<br><strong>Explanation:</strong> The <code>expo start --clear</code> command clears cached files and ensures a fresh build during development.</div>
+</div>
+<footer>
+    <p>Created for Week 13 Practice</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
