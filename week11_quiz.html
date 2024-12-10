@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Week 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3F51B5;
+        }
+
+        .question-container {
+            background: #fff;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .show-answer {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 1.1em;
+            color: #fff;
+            background: #3F51B5;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .show-answer:hover {
+            background: #283593;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            background: #dff0d8;
+            border-left: 5px solid #3F51B5;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Week 11</h1>
+
+<!-- Question 1 -->
+<div class="question-container">
+    <p class="question">1. What is the purpose of a "View" component in React Native?</p>
+    <ul>
+        <li>A) To manage the layout and grouping of child components</li>
+        <li>B) To handle user input</li>
+        <li>C) To fetch data from an API</li>
+        <li>D) To apply animations to components</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(1)">Show Answer</button>
+    <div id="answer1" class="answer">Answer: A) To manage the layout and grouping of child components<br><strong>Explanation:</strong> The <code>View</code> component acts as a container for child components and helps manage their layout.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <p class="question">2. What is the primary difference between a "ScrollView" and a "FlatList"?</p>
+    <ul>
+        <li>A) "ScrollView" renders all items at once; "FlatList" optimizes rendering for large datasets</li>
+        <li>B) "ScrollView" supports horizontal scrolling; "FlatList" does not</li>
+        <li>C) "ScrollView" is for lists; "FlatList" is for tables</li>
+        <li>D) "ScrollView" has better performance than "FlatList"</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(2)">Show Answer</button>
+    <div id="answer2" class="answer">Answer: A) "ScrollView" renders all items at once; "FlatList" optimizes rendering for large datasets<br><strong>Explanation:</strong> "ScrollView" is suitable for smaller lists, while "FlatList" is optimized for handling large datasets efficiently.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <p class="question">3. What is the purpose of the "keyExtractor" property in "FlatList"?</p>
+    <ul>
+        <li>A) To uniquely identify each item in the list</li>
+        <li>B) To fetch additional data for the list</li>
+        <li>C) To set the index of the list items</li>
+        <li>D) To enable scroll functionality</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(3)">Show Answer</button>
+    <div id="answer3" class="answer">Answer: A) To uniquely identify each item in the list<br><strong>Explanation:</strong> The <code>keyExtractor</code> property provides a unique key for each item, which helps React Native optimize rendering.</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <p class="question">4. What does the "renderItem" property in "FlatList" define?</p>
+    <ul>
+        <li>A) The data source for the list</li>
+        <li>B) How each item is displayed</li>
+        <li>C) The scroll direction of the list</li>
+        <li>D) The performance optimization settings</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(4)">Show Answer</button>
+    <div id="answer4" class="answer">Answer: B) How each item is displayed<br><strong>Explanation:</strong> The <code>renderItem</code> property defines the component and layout for rendering each item in the list.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <p class="question">5. What is the default behavior of "TouchableOpacity"?</p>
+    <ul>
+        <li>A) Reduces the opacity of the component when pressed</li>
+        <li>B) Changes the color of the component</li>
+        <li>C) Resizes the component</li>
+        <li>D) Displays a ripple effect</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(5)">Show Answer</button>
+    <div id="answer5" class="answer">Answer: A) Reduces the opacity of the component when pressed<br><strong>Explanation:</strong> The <code>TouchableOpacity</code> component reduces the opacity of its child elements when pressed, providing visual feedback.</div>
+</div>
+<!-- Question 6 -->
+<div class="question-container">
+    <p class="question">6. What is the "data" property in a "FlatList" used for?</p>
+    <ul>
+        <li>A) To define the items to be rendered</li>
+        <li>B) To set the style of the list</li>
+        <li>C) To determine the scroll direction</li>
+        <li>D) To manage the key for each item</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(6)">Show Answer</button>
+    <div id="answer6" class="answer">Answer: A) To define the items to be rendered<br><strong>Explanation:</strong> The <code>data</code> property in <code>FlatList</code> specifies the array of items that will be displayed in the list.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <p class="question">7. What happens if you do not provide a unique key for each item in a "FlatList"?</p>
+    <ul>
+        <li>A) The app may experience rendering issues</li>
+        <li>B) The list will not render</li>
+        <li>C) The items will overlap</li>
+        <li>D) Nothing; it is not required</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(7)">Show Answer</button>
+    <div id="answer7" class="answer">Answer: A) The app may experience rendering issues<br><strong>Explanation:</strong> Providing a unique key helps React Native optimize rendering and avoid issues like duplicated or mismatched items.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <p class="question">8. Which property in "FlatList" controls the scroll direction?</p>
+    <ul>
+        <li>A) horizontal</li>
+        <li>B) scrollDirection</li>
+        <li>C) renderDirection</li>
+        <li>D) orientation</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(8)">Show Answer</button>
+    <div id="answer8" class="answer">Answer: A) horizontal<br><strong>Explanation:</strong> The <code>horizontal</code> property in <code>FlatList</code> specifies whether the list should scroll horizontally.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+    <p class="question">9. What is the purpose of the "onPress" property in "TouchableOpacity"?</p>
+    <ul>
+        <li>A) To define the action to perform when the component is pressed</li>
+        <li>B) To change the opacity of the component</li>
+        <li>C) To add animations to the component</li>
+        <li>D) To set the size of the component</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(9)">Show Answer</button>
+    <div id="answer9" class="answer">Answer: A) To define the action to perform when the component is pressed<br><strong>Explanation:</strong> The <code>onPress</code> property specifies a function that runs when the <code>TouchableOpacity</code> component is pressed.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+    <p class="question">10. What is the default behavior of a "ScrollView"?</p>
+    <ul>
+        <li>A) Renders all its child components</li>
+        <li>B) Optimizes rendering for large lists</li>
+        <li>C) Supports horizontal scrolling by default</li>
+        <li>D) Adds touchable functionality to components</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(10)">Show Answer</button>
+    <div id="answer10" class="answer">Answer: A) Renders all its child components<br><strong>Explanation:</strong> A <code>ScrollView</code> renders all its child components at once, making it suitable for smaller datasets.</div>
+</div>
+<!-- Question 11 -->
+<div class="question-container">
+    <p class="question">11. What is the purpose of the "contentContainerStyle" property in "ScrollView"?</p>
+    <ul>
+        <li>A) To style the inner content of the ScrollView</li>
+        <li>B) To add padding to the ScrollView container</li>
+        <li>C) To adjust the scroll direction</li>
+        <li>D) To handle touch gestures</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(11)">Show Answer</button>
+    <div id="answer11" class="answer">Answer: A) To style the inner content of the ScrollView<br><strong>Explanation:</strong> The <code>contentContainerStyle</code> property is used to apply styles to the inner content of the <code>ScrollView</code>.</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+    <p class="question">12. What is a key advantage of using "FlatList" over "ScrollView" for large datasets?</p>
+    <ul>
+        <li>A) FlatList optimizes rendering by lazily loading items</li>
+        <li>B) FlatList supports horizontal scrolling</li>
+        <li>C) FlatList allows nested scrolling</li>
+        <li>D) FlatList has better styling options</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(12)">Show Answer</button>
+    <div id="answer12" class="answer">Answer: A) FlatList optimizes rendering by lazily loading items<br><strong>Explanation:</strong> <code>FlatList</code> loads items lazily, improving performance when dealing with large datasets.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+    <p class="question">13. What does the "ListEmptyComponent" property in "FlatList" define?</p>
+    <ul>
+        <li>A) A component to display when the list has no data</li>
+        <li>B) A placeholder for unmounted components</li>
+        <li>C) A function to render items dynamically</li>
+        <li>D) A footer for the list</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(13)">Show Answer</button>
+    <div id="answer13" class="answer">Answer: A) A component to display when the list has no data<br><strong>Explanation:</strong> The <code>ListEmptyComponent</code> property specifies a component to render when the data array is empty.</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+    <p class="question">14. How does the "TouchableHighlight" component differ from "TouchableOpacity"?</p>
+    <ul>
+        <li>A) It highlights the background when pressed</li>
+        <li>B) It changes the size of the component</li>
+        <li>C) It reduces opacity on press</li>
+        <li>D) It disables touch gestures</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(14)">Show Answer</button>
+    <div id="answer14" class="answer">Answer: A) It highlights the background when pressed<br><strong>Explanation:</strong> <code>TouchableHighlight</code> highlights the background of its child component when pressed.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+    <p class="question">15. What is the "numColumns" property in "FlatList" used for?</p>
+    <ul>
+        <li>A) To render items in multiple columns</li>
+        <li>B) To set the number of items displayed</li>
+        <li>C) To align items horizontally</li>
+        <li>D) To sort items in the list</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(15)">Show Answer</button>
+    <div id="answer15" class="answer">Answer: A) To render items in multiple columns<br><strong>Explanation:</strong> The <code>numColumns</code> property specifies the number of columns for rendering items in a <code>FlatList</code>.</div>
+</div>
+<!-- Question 16 -->
+<div class="question-container">
+    <p class="question">16. What does the "initialNumToRender" property in "FlatList" control?</p>
+    <ul>
+        <li>A) The number of items rendered initially</li>
+        <li>B) The total number of items in the list</li>
+        <li>C) The number of columns for the list</li>
+        <li>D) The scroll direction of the list</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(16)">Show Answer</button>
+    <div id="answer16" class="answer">Answer: A) The number of items rendered initially<br><strong>Explanation:</strong> The <code>initialNumToRender</code> property controls how many items are rendered during the initial render.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+    <p class="question">17. What is the purpose of the "onEndReached" property in "FlatList"?</p>
+    <ul>
+        <li>A) To trigger an event when the user scrolls to the end of the list</li>
+        <li>B) To define the last visible item</li>
+        <li>C) To disable further scrolling</li>
+        <li>D) To load all items at once</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(17)">Show Answer</button>
+    <div id="answer17" class="answer">Answer: A) To trigger an event when the user scrolls to the end of the list<br><strong>Explanation:</strong> The <code>onEndReached</code> property is used to fetch or load more data when the user scrolls to the end of the list.</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+    <p class="question">18. How does "ScrollView" handle long lists compared to "FlatList"?</p>
+    <ul>
+        <li>A) ScrollView renders all items at once, while FlatList renders items on demand</li>
+        <li>B) ScrollView loads items on demand, while FlatList renders all at once</li>
+        <li>C) Both handle long lists the same way</li>
+        <li>D) ScrollView cannot handle long lists</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(18)">Show Answer</button>
+    <div id="answer18" class="answer">Answer: A) ScrollView renders all items at once, while FlatList renders items on demand<br><strong>Explanation:</strong> <code>ScrollView</code> is suitable for small datasets, while <code>FlatList</code> optimizes rendering for large lists by loading items lazily.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+    <p class="question">19. What is the purpose of the "refreshControl" property in "ScrollView"?</p>
+    <ul>
+        <li>A) To add pull-to-refresh functionality</li>
+        <li>B) To manage horizontal scrolling</li>
+        <li>C) To control the scrolling speed</li>
+        <li>D) To add pagination to the list</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(19)">Show Answer</button>
+    <div id="answer19" class="answer">Answer: A) To add pull-to-refresh functionality<br><strong>Explanation:</strong> The <code>refreshControl</code> property enables pull-to-refresh functionality in a <code>ScrollView</code>.</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+    <p class="question">20. What is the "stickyHeaderIndices" property in "ScrollView" used for?</p>
+    <ul>
+        <li>A) To keep specific headers fixed while scrolling</li>
+        <li>B) To enable horizontal scrolling</li>
+        <li>C) To group list items</li>
+        <li>D) To sort items in the list</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(20)">Show Answer</button>
+    <div id="answer20" class="answer">Answer: A) To keep specific headers fixed while scrolling<br><strong>Explanation:</strong> The <code>stickyHeaderIndices</code> property specifies the indices of headers that should remain fixed while scrolling.</div>
+</div>
+
+  <!-- Question 21 -->
+<div class="question-container">
+    <p class="question">21. What does the "inverted" property in "FlatList" do?</p>
+    <ul>
+        <li>A) Reverses the scroll direction</li>
+        <li>B) Hides all items in the list</li>
+        <li>C) Loads the items in batches</li>
+        <li>D) Enables pagination for the list</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(21)">Show Answer</button>
+    <div id="answer21" class="answer">Answer: A) Reverses the scroll direction<br><strong>Explanation:</strong> The <code>inverted</code> property reverses the order of the items and their scroll direction in a <code>FlatList</code>.</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <p class="question">22. What is the "ListFooterComponent" property in "FlatList" used for?</p>
+    <ul>
+        <li>A) To render a footer at the end of the list</li>
+        <li>B) To handle touch gestures on the list</li>
+        <li>C) To sort the items in the list</li>
+        <li>D) To optimize scrolling performance</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(22)">Show Answer</button>
+    <div id="answer22" class="answer">Answer: A) To render a footer at the end of the list<br><strong>Explanation:</strong> The <code>ListFooterComponent</code> property specifies a component to display as the footer of the <code>FlatList</code>.</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <p class="question">23. What is the purpose of the "removeClippedSubviews" property in "FlatList"?</p>
+    <ul>
+        <li>A) To improve performance by removing off-screen items</li>
+        <li>B) To disable user interactions</li>
+        <li>C) To sort items in the list</li>
+        <li>D) To add padding between items</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(23)">Show Answer</button>
+    <div id="answer23" class="answer">Answer: A) To improve performance by removing off-screen items<br><strong>Explanation:</strong> The <code>removeClippedSubviews</code> property removes off-screen items to reduce memory usage and improve performance.</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <p class="question">24. What is the "pagingEnabled" property in "ScrollView" used for?</p>
+    <ul>
+        <li>A) To snap to pages during scrolling</li>
+        <li>B) To disable touch gestures</li>
+        <li>C) To fetch data from an API</li>
+        <li>D) To enable pull-to-refresh functionality</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(24)">Show Answer</button>
+    <div id="answer24" class="answer">Answer: A) To snap to pages during scrolling<br><strong>Explanation:</strong> The <code>pagingEnabled</code> property makes the <code>ScrollView</code> snap to page boundaries while scrolling.</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <p class="question">25. What does the "alwaysBounceVertical" property in "ScrollView" control?</p>
+    <ul>
+        <li>A) Whether vertical bouncing is enabled</li>
+        <li>B) The scroll speed</li>
+        <li>C) The direction of scrolling</li>
+        <li>D) The rendering order of items</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(25)">Show Answer</button>
+    <div id="answer25" class="answer">Answer: A) Whether vertical bouncing is enabled<br><strong>Explanation:</strong> The <code>alwaysBounceVertical</code> property controls whether the <code>ScrollView</code> allows vertical bouncing when the content is smaller than the view.</div>
+</div>
+
+<!-- Question 26 -->
+<div class="question-container">
+    <p class="question">26. What is the purpose of the "onMomentumScrollEnd" property in "ScrollView"?</p>
+    <ul>
+        <li>A) To execute a function after the scroll momentum stops</li>
+        <li>B) To enable infinite scrolling</li>
+        <li>C) To set the initial scroll position</li>
+        <li>D) To enable pull-to-refresh functionality</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(26)">Show Answer</button>
+    <div id="answer26" class="answer">Answer: A) To execute a function after the scroll momentum stops<br><strong>Explanation:</strong> The <code>onMomentumScrollEnd</code> property is triggered after the scrolling momentum comes to a stop.</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <p class="question">27. How do you enable horizontal scrolling in a "ScrollView"?</p>
+    <ul>
+        <li>A) Set the "horizontal" property to true</li>
+        <li>B) Use the "scrollDirection" property</li>
+        <li>C) Wrap the content in a "FlatList"</li>
+        <li>D) Add the "pagingEnabled" property</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(27)">Show Answer</button>
+    <div id="answer27" class="answer">Answer: A) Set the "horizontal" property to true<br><strong>Explanation:</strong> Setting the <code>horizontal</code> property to <code>true</code> enables horizontal scrolling in a <code>ScrollView</code>.</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <p class="question">28. What is the purpose of the "onEndReachedThreshold" property in "FlatList"?</p>
+    <ul>
+        <li>A) To determine how close to the end the user must scroll before triggering "onEndReached"</li>
+        <li>B) To set the maximum scroll distance</li>
+        <li>C) To limit the number of items loaded</li>
+        <li>D) To enable infinite scrolling</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(28)">Show Answer</button>
+    <div id="answer28" class="answer">Answer: A) To determine how close to the end the user must scroll before triggering "onEndReached"<br><strong>Explanation:</strong> The <code>onEndReachedThreshold</code> property specifies how close to the end of the list the user must scroll to trigger the <code>onEndReached</code> event.</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <p class="question">29. What does the "disableIntervalMomentum" property in "ScrollView" do?</p>
+    <ul>
+        <li>A) Prevents momentum scrolling from snapping to intervals</li>
+        <li>B) Disables scrolling entirely</li>
+        <li>C) Enables infinite scrolling</li>
+        <li>D) Prevents vertical scrolling</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(29)">Show Answer</button>
+    <div id="answer29" class="answer">Answer: A) Prevents momentum scrolling from snapping to intervals<br><strong>Explanation:</strong> The <code>disableIntervalMomentum</code> property prevents scrolling momentum from snapping to fixed intervals.</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <p class="question">30. Which property in "FlatList" handles pull-to-refresh functionality?</p>
+    <ul>
+        <li>A) refreshing</li>
+        <li>B) refreshEnabled</li>
+        <li>C) pullRefresh</li>
+        <li>D) onRefresh</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(30)">Show Answer</button>
+    <div id="answer30" class="answer">Answer: D) onRefresh<br><strong>Explanation:</strong> The <code>onRefresh</code> property handles the pull-to-refresh functionality in a <code>FlatList</code>.</div>
+</div>
+<footer>
+    <p>Created for Week 11 Practice</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+<footer>
+    <p>Created for Week 11 Practice</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
