@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Week 12</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796B;
+        }
+
+        .question-container {
+            background: #fff;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .show-answer {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 1.1em;
+            color: #fff;
+            background: #00796B;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .show-answer:hover {
+            background: #004D40;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            background: #dff0d8;
+            border-left: 5px solid #00796B;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Week 12</h1>
+
+<!-- Question 1 -->
+<div class="question-container">
+    <p class="question">1. What is the purpose of using "React Navigation" in a React Native app?</p>
+    <ul>
+        <li>A) To handle navigation between screens</li>
+        <li>B) To fetch data from APIs</li>
+        <li>C) To optimize the app's performance</li>
+        <li>D) To manage state in components</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(1)">Show Answer</button>
+    <div id="answer1" class="answer">Answer: A) To handle navigation between screens<br><strong>Explanation:</strong> React Navigation provides routing and navigation solutions for React Native apps.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question-container">
+    <p class="question">2. What is a "Stack Navigator" used for in React Navigation?</p>
+    <ul>
+        <li>A) To manage a stack of screens and navigate between them</li>
+        <li>B) To add animations to screens</li>
+        <li>C) To fetch data for each screen</li>
+        <li>D) To implement horizontal scrolling</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(2)">Show Answer</button>
+    <div id="answer2" class="answer">Answer: A) To manage a stack of screens and navigate between them<br><strong>Explanation:</strong> A Stack Navigator allows users to navigate forward and backward between screens in a stack.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question-container">
+    <p class="question">3. What is the "NavigationContainer" component used for?</p>
+    <ul>
+        <li>A) To wrap navigators and manage navigation state</li>
+        <li>B) To style the navigation header</li>
+        <li>C) To add transitions between screens</li>
+        <li>D) To connect the app to a backend service</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(3)">Show Answer</button>
+    <div id="answer3" class="answer">Answer: A) To wrap navigators and manage navigation state<br><strong>Explanation:</strong> The <code>NavigationContainer</code> component is the top-level container for all navigation in a React Native app.</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question-container">
+    <p class="question">4. What is the difference between "push" and "navigate" in Stack Navigator?</p>
+    <ul>
+        <li>A) "push" adds a new screen to the stack, while "navigate" finds an existing screen</li>
+        <li>B) "push" navigates backward, while "navigate" moves forward</li>
+        <li>C) "push" resets the stack, while "navigate" preserves the stack</li>
+        <li>D) There is no difference</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(4)">Show Answer</button>
+    <div id="answer4" class="answer">Answer: A) "push" adds a new screen to the stack, while "navigate" finds an existing screen<br><strong>Explanation:</strong> The <code>push</code> method adds a new instance of a screen, even if it already exists in the stack, while <code>navigate</code> moves to an existing screen if it exists.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question-container">
+    <p class="question">5. What is the purpose of the "headerShown" property in Stack Navigator?</p>
+    <ul>
+        <li>A) To toggle the visibility of the navigation header</li>
+        <li>B) To change the color of the header</li>
+        <li>C) To disable back navigation</li>
+        <li>D) To add animations to the header</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(5)">Show Answer</button>
+    <div id="answer5" class="answer">Answer: A) To toggle the visibility of the navigation header<br><strong>Explanation:</strong> The <code>headerShown</code> property controls whether the navigation header is visible or hidden.</div>
+</div>
+<!-- Question 6 -->
+<div class="question-container">
+    <p class="question">6. What is the purpose of the "initialRouteName" property in Stack Navigator?</p>
+    <ul>
+        <li>A) To set the default screen when the app loads</li>
+        <li>B) To navigate to a specific screen</li>
+        <li>C) To disable transitions between screens</li>
+        <li>D) To add headers to all screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(6)">Show Answer</button>
+    <div id="answer6" class="answer">Answer: A) To set the default screen when the app loads<br><strong>Explanation:</strong> The <code>initialRouteName</code> property specifies the first screen to be displayed in the Stack Navigator.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question-container">
+    <p class="question">7. What does the "screenOptions" property in Stack Navigator allow you to do?</p>
+    <ul>
+        <li>A) Set default options for all screens</li>
+        <li>B) Disable navigation between screens</li>
+        <li>C) Add animations to specific screens</li>
+        <li>D) Load multiple screens at once</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(7)">Show Answer</button>
+    <div id="answer7" class="answer">Answer: A) Set default options for all screens<br><strong>Explanation:</strong> The <code>screenOptions</code> property is used to define default settings for all screens in the Stack Navigator.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question-container">
+    <p class="question">8. What is the purpose of the "Tab Navigator" in React Navigation?</p>
+    <ul>
+        <li>A) To switch between screens using tabs</li>
+        <li>B) To manage a stack of screens</li>
+        <li>C) To navigate backward and forward</li>
+        <li>D) To fetch data for different screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(8)">Show Answer</button>
+    <div id="answer8" class="answer">Answer: A) To switch between screens using tabs<br><strong>Explanation:</strong> The Tab Navigator is used to navigate between different screens using a tab-based interface.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question-container">
+    <p class="question">9. What property is used to customize the appearance of the tabs in Tab Navigator?</p>
+    <ul>
+        <li>A) tabBarOptions</li>
+        <li>B) screenOptions</li>
+        <li>C) headerShown</li>
+        <li>D) initialRouteName</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(9)">Show Answer</button>
+    <div id="answer9" class="answer">Answer: A) tabBarOptions<br><strong>Explanation:</strong> The <code>tabBarOptions</code> property is used to customize the appearance of the tabs in the Tab Navigator.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question-container">
+    <p class="question">10. What does the "bottom tab navigator" in React Navigation provide?</p>
+    <ul>
+        <li>A) A navigation bar at the bottom of the screen</li>
+        <li>B) A stack of screens</li>
+        <li>C) A fullscreen navigation interface</li>
+        <li>D) A sidebar menu</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(10)">Show Answer</button>
+    <div id="answer10" class="answer">Answer: A) A navigation bar at the bottom of the screen<br><strong>Explanation:</strong> The bottom tab navigator provides a navigation bar at the bottom of the app for switching between screens.</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question-container">
+    <p class="question">11. What is the purpose of the "Drawer Navigator" in React Navigation?</p>
+    <ul>
+        <li>A) To create a side menu for navigation</li>
+        <li>B) To manage nested navigators</li>
+        <li>C) To fetch data for screens</li>
+        <li>D) To add animations between screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(11)">Show Answer</button>
+    <div id="answer11" class="answer">Answer: A) To create a side menu for navigation<br><strong>Explanation:</strong> The Drawer Navigator allows users to open a side menu for navigating between screens.</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question-container">
+    <p class="question">12. How do you add a custom component to the header in Stack Navigator?</p>
+    <ul>
+        <li>A) Use the "headerTitle" property</li>
+        <li>B) Use the "screenOptions" property</li>
+        <li>C) Modify the "initialRouteName" property</li>
+        <li>D) Enable the "tabBarOptions" property</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(12)">Show Answer</button>
+    <div id="answer12" class="answer">Answer: A) Use the "headerTitle" property<br><strong>Explanation:</strong> The <code>headerTitle</code> property allows you to add a custom component to the header in Stack Navigator.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question-container">
+    <p class="question">13. What is the purpose of the "lazy" property in Tab Navigator?</p>
+    <ul>
+        <li>A) To load screens only when they are accessed</li>
+        <li>B) To disable navigation between tabs</li>
+        <li>C) To enable animations for all tabs</li>
+        <li>D) To preload all screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(13)">Show Answer</button>
+    <div id="answer13" class="answer">Answer: A) To load screens only when they are accessed<br><strong>Explanation:</strong> The <code>lazy</code> property ensures that screens in the Tab Navigator are loaded only when they are accessed, improving performance.</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question-container">
+    <p class="question">14. What is the purpose of the "detachInactiveScreens" property in Stack Navigator?</p>
+    <ul>
+        <li>A) To improve performance by detaching inactive screens</li>
+        <li>B) To disable transitions between screens</li>
+        <li>C) To enable tab navigation</li>
+        <li>D) To preload all screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(14)">Show Answer</button>
+    <div id="answer14" class="answer">Answer: A) To improve performance by detaching inactive screens<br><strong>Explanation:</strong> The <code>detachInactiveScreens</code> property detaches screens that are not active, optimizing memory usage and performance.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question-container">
+    <p class="question">15. What does the "headerStyle" property in Stack Navigator control?</p>
+    <ul>
+        <li>A) The appearance of the navigation header</li>
+        <li>B) The animations between screens</li>
+        <li>C) The transition type</li>
+        <li>D) The order of screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(15)">Show Answer</button>
+    <div id="answer15" class="answer">Answer: A) The appearance of the navigation header<br><strong>Explanation:</strong> The <code>headerStyle</code> property controls the styling of the navigation header, such as its background color and height.</div>
+</div>
+
+<!-- Question 16 -->
+<div class="question-container">
+    <p class="question">16. What does the "backBehavior" property in Tab Navigator control?</p>
+    <ul>
+        <li>A) The behavior of the back button on Android</li>
+        <li>B) The transition animations between tabs</li>
+        <li>C) The visibility of the tabs</li>
+        <li>D) The order of tabs in the navigator</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(16)">Show Answer</button>
+    <div id="answer16" class="answer">Answer: A) The behavior of the back button on Android<br><strong>Explanation:</strong> The <code>backBehavior</code> property defines what happens when the back button is pressed while on a tab, such as going to the first tab or exiting the navigator.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question-container">
+    <p class="question">17. What is the purpose of the "headerMode" property in Stack Navigator?</p>
+    <ul>
+        <li>A) To control how headers are shown for screens in the stack</li>
+        <li>B) To enable animations for headers</li>
+        <li>C) To disable headers globally</li>
+        <li>D) To change the order of screens in the stack</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(17)">Show Answer</button>
+    <div id="answer17" class="answer">Answer: A) To control how headers are shown for screens in the stack<br><strong>Explanation:</strong> The <code>headerMode</code> property determines whether headers are shown, hidden, or floated for screens in the Stack Navigator.</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question-container">
+    <p class="question">18. How can you disable gestures for a specific screen in Stack Navigator?</p>
+    <ul>
+        <li>A) Set the "gestureEnabled" property to false</li>
+        <li>B) Use the "headerShown" property</li>
+        <li>C) Add "tabBarOptions" to the screen</li>
+        <li>D) Disable "lazy" loading</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(18)">Show Answer</button>
+    <div id="answer18" class="answer">Answer: A) Set the "gestureEnabled" property to false<br><strong>Explanation:</strong> The <code>gestureEnabled</code> property controls whether gestures like swiping are enabled for a screen.</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question-container">
+    <p class="question">19. What is the "safeAreaInsets" property in Tab Navigator used for?</p>
+    <ul>
+        <li>A) To ensure content does not overlap with system UI</li>
+        <li>B) To add padding to all tabs</li>
+        <li>C) To disable the back button</li>
+        <li>D) To preload all tabs</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(19)">Show Answer</button>
+    <div id="answer19" class="answer">Answer: A) To ensure content does not overlap with system UI<br><strong>Explanation:</strong> The <code>safeAreaInsets</code> property ensures that content respects the safe area boundaries of the device.</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question-container">
+    <p class="question">20. What does the "detachInactiveScreens" property in Tab Navigator control?</p>
+    <ul>
+        <li>A) Whether inactive screens are removed from memory</li>
+        <li>B) The animations between active tabs</li>
+        <li>C) The visibility of the tabs</li>
+        <li>D) The back behavior of the navigator</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(20)">Show Answer</button>
+    <div id="answer20" class="answer">Answer: A) Whether inactive screens are removed from memory<br><strong>Explanation:</strong> The <code>detachInactiveScreens</code> property helps improve performance by detaching inactive screens in Tab Navigator.</div>
+</div>
+
+<!-- Question 21 -->
+<div class="question-container">
+    <p class="question">21. What is the purpose of the "drawerType" property in Drawer Navigator?</p>
+    <ul>
+        <li>A) To define how the drawer appears (front, back, or slide)</li>
+        <li>B) To customize the appearance of the drawer</li>
+        <li>C) To control gestures for opening the drawer</li>
+        <li>D) To disable the drawer</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(21)">Show Answer</button>
+    <div id="answer21" class="answer">Answer: A) To define how the drawer appears (front, back, or slide)<br><strong>Explanation:</strong> The <code>drawerType</code> property controls the behavior of the drawer, such as whether it slides, overlays, or pushes content.</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <p class="question">22. How do you specify the width of the drawer in Drawer Navigator?</p>
+    <ul>
+        <li>A) Use the "drawerWidth" property</li>
+        <li>B) Modify the "safeAreaInsets"</li>
+        <li>C) Set the "tabBarOptions"</li>
+        <li>D) Use the "screenOptions" property</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(22)">Show Answer</button>
+    <div id="answer22" class="answer">Answer: A) Use the "drawerWidth" property<br><strong>Explanation:</strong> The <code>drawerWidth</code> property specifies the width of the drawer in Drawer Navigator.</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <p class="question">23. What does the "swipeEnabled" property in Drawer Navigator do?</p>
+    <ul>
+        <li>A) Controls whether users can swipe to open the drawer</li>
+        <li>B) Adds animations to drawer transitions</li>
+        <li>C) Prevents the drawer from overlapping content</li>
+        <li>D) Enables gestures for tabs</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(23)">Show Answer</button>
+    <div id="answer23" class="answer">Answer: A) Controls whether users can swipe to open the drawer<br><strong>Explanation:</strong> The <code>swipeEnabled</code> property allows or disables swipe gestures for opening the drawer.</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <p class="question">24. What is the "unmountOnBlur" property in Tab Navigator used for?</p>
+    <ul>
+        <li>A) To unmount a screen when it loses focus</li>
+        <li>B) To prevent tabs from being swiped</li>
+        <li>C) To preload inactive tabs</li>
+        <li>D) To add a blur effect to inactive tabs</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(24)">Show Answer</button>
+    <div id="answer24" class="answer">Answer: A) To unmount a screen when it loses focus<br><strong>Explanation:</strong> The <code>unmountOnBlur</code> property removes a screen from memory when it is no longer active.</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <p class="question">25. What does the "drawerLockMode" property in Drawer Navigator control?</p>
+    <ul>
+        <li>A) Whether the drawer can be opened manually</li>
+        <li>B) The width of the drawer</li>
+        <li>C) The animation speed of the drawer</li>
+        <li>D) The order of items in the drawer</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(25)">Show Answer</button>
+    <div id="answer25" class="answer">Answer: A) Whether the drawer can be opened manually<br><strong>Explanation:</strong> The <code>drawerLockMode</code> property determines if the drawer can be opened manually or only programmatically.</div>
+</div>
+<!-- Question 26 -->
+<div class="question-container">
+    <p class="question">26. What is the purpose of the "hideStatusBar" property in Drawer Navigator?</p>
+    <ul>
+        <li>A) To hide the device's status bar when the drawer is open</li>
+        <li>B) To prevent the drawer from overlapping the status bar</li>
+        <li>C) To remove the header from the drawer</li>
+        <li>D) To disable swipe gestures for the drawer</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(26)">Show Answer</button>
+    <div id="answer26" class="answer">Answer: A) To hide the device's status bar when the drawer is open<br><strong>Explanation:</strong> The <code>hideStatusBar</code> property ensures the status bar is hidden when the drawer is open for a cleaner user interface.</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <p class="question">27. How do you enable a custom background for the drawer in Drawer Navigator?</p>
+    <ul>
+        <li>A) Use the "drawerBackgroundColor" property</li>
+        <li>B) Modify the "safeAreaInsets"</li>
+        <li>C) Set the "tabBarOptions"</li>
+        <li>D) Use the "screenOptions" property</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(27)">Show Answer</button>
+    <div id="answer27" class="answer">Answer: A) Use the "drawerBackgroundColor" property<br><strong>Explanation:</strong> The <code>drawerBackgroundColor</code> property allows you to set a custom background color for the drawer.</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <p class="question">28. What does the "overlayColor" property in Drawer Navigator control?</p>
+    <ul>
+        <li>A) The color of the overlay that appears when the drawer is open</li>
+        <li>B) The background color of the drawer</li>
+        <li>C) The color of active items in the drawer</li>
+        <li>D) The width of the drawer</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(28)">Show Answer</button>
+    <div id="answer28" class="answer">Answer: A) The color of the overlay that appears when the drawer is open<br><strong>Explanation:</strong> The <code>overlayColor</code> property specifies the color of the semi-transparent overlay shown behind the drawer when it is open.</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <p class="question">29. How can you disable gestures in Drawer Navigator?</p>
+    <ul>
+        <li>A) Set the "swipeEnabled" property to false</li>
+        <li>B) Use the "gestureEnabled" property</li>
+        <li>C) Modify the "tabBarOptions"</li>
+        <li>D) Set "lazy" loading to true</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(29)">Show Answer</button>
+    <div id="answer29" class="answer">Answer: A) Set the "swipeEnabled" property to false<br><strong>Explanation:</strong> The <code>swipeEnabled</code> property controls whether users can use gestures like swiping to open the drawer.</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <p class="question">30. What is the purpose of the "edgeWidth" property in Drawer Navigator?</p>
+    <ul>
+        <li>A) To set the width of the edge swipe area</li>
+        <li>B) To control the width of the drawer</li>
+        <li>C) To customize the tab bar options</li>
+        <li>D) To disable gestures for specific screens</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(30)">Show Answer</button>
+    <div id="answer30" class="answer">Answer: A) To set the width of the edge swipe area<br><strong>Explanation:</strong> The <code>edgeWidth</code> property determines the width of the area from the edge of the screen where swipe gestures will open the drawer.</div>
+</div>
+
+<footer>
+    <p>Created for Week 12 Practice</p>
+</footer>
+
+<script>
+    function toggleAnswer(questionNumber) {
+        const answerElement = document.getElementById('answer' + questionNumber);
+        if (answerElement.style.display === 'none' || answerElement.style.display === '') {
+            answerElement.style.display = 'block';
+        } else {
+            answerElement.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
